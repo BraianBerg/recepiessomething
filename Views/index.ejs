@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ran retsept</title>
+</head>
+<body>
+    <h2> <%= dataFromSpoon.title %></h2>
+    <img src="<%= dataFromSpoon.image %>" />
+    <h2>Summary:</h2>
+    <p><%- dataFromSpoon.summary %></p>
+    <h2>Instructions:</h2>
+    <p><%- dataFromSpoon.inst %></p>
+    <h2>Ingredients:</h2>
+    <% for(let i = 0; i < dataFromSpoon.ingredients.length; i++) { %>
+        <p> <%= dataFromSpoon.ingredients[i].name %> <%= dataFromSpoon.ingredients[i].ammount %> <%= dataFromSpoon.ingredients[i].unit %></p>
+       
+        
+    <% } %>
+
+
+
+
+</body>
+</html>
